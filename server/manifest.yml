@@ -1,0 +1,15 @@
+applications:
+  - instances: 1
+    timeout: 180
+    name: leaflifebackend
+    buildpack: sdk-for-nodejs
+    command: npm start
+    disk_quota: 1G
+    memory: 256MB
+    domain: mybluemix.net
+    host: leaflifebackend
+    services:
+      - leaflife-backend-db2oncloud-1596066797473-44433
+    env:
+      OPTIMIZE_MEMORY: true
+  
